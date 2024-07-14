@@ -52,6 +52,7 @@ export const setupOrderRoutes = app => {
       path: '/',
       secure: true,
       sameSite: 'None',
+      maxAge: 259200000, // 3 дня
     });
     carts[newAccessKey] = { items: [] };
     await writeCartData(carts);
