@@ -27,7 +27,9 @@ const setupProductRoutes = app => {
 
       if (search) {
         console.log('Search query:', search);
-        const filteredProducts = filterBySearch(allProducts, search);
+        const min = parseInt(minPrice) || 0;
+        const max = parseInt(maxPrice) || Number.MAX_SAFE_INTEGER;
+        const filteredProducts = filterBySearch(allProducts, search, min, max, category);
         console.log('filteredProducts: ', filteredProducts);
         return res.json(filteredProducts);
       }
