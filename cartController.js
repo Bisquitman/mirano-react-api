@@ -21,6 +21,7 @@ export const setupCartRoutes = app => {
         path: '/',
         secure: true,
         sameSite: 'None',
+        maxAge: 259200000, // 3 дня
       });
       res.json({ accessKey: newAccessKey });
     }
