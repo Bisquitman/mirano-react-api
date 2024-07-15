@@ -12,7 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: ['https://mirano-nu.vercel.app', 'https://mirano-jquh.onrender.com', 'http://192.168.0.33:5173', 'http://192.168.1.2:5173', 'http://127.0.0.1:5173', 'http://localhost:5173', 'https://mirano-react.onrender.com', 'https://mirano-react.vercel.app'], // Замените на URL вашего фронтенда
+  origin: ['http://127.0.0.1:5500', 'http://localhost:5173', 'https://mirano.vercel.app'], // Замените на URL вашего фронтенда
   credentials: true,
 };
 
